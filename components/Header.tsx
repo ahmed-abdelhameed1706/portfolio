@@ -8,7 +8,7 @@ export default function Header() {
 				Ahmed
 			</Link>
 
-			<ul className="flix-2 flex justify-end gap-14">
+			<ul className="flix-2 flex justify-end gap-3">
 				<Link className="font-bold" href="/about">
 					About
 				</Link>
