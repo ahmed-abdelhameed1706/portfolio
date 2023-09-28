@@ -9,7 +9,7 @@ export default function About() {
 				<p className="text-2xl mb-3">
 					I am a passionate software engineer from Egypt.
 				</p>
-				<p className="text-2xl mb-3 leading-loose">
+				<p className="lg:text-2xl md:text-lg xxs:text-sm mb-3 leading-loose">
 					After Graduating with a Degree in Accounting I decided to
 					pursue my passion for programming, I Enrolled in 3 months
 					FWD programme and after that I Enrolled in the 15 months ALX
@@ -26,7 +26,7 @@ export default function About() {
 				</p>
 			</div>
 			<div className="mt-6">
-				<h2 className="text-3xl mb-10">you can download my CV here</h2>
+				<h2 className="lg:text-3xl md:text-lg xxs:text-sm mb-10">you can download my CV here</h2>
 				<div className="text-center xxs:mb-[35px] xs:mb-[35px]">
 					<a
 						href="/Ahmed-AbdElHameed-CV.pdf"

@@ -16,7 +16,7 @@ export default function Home() {
 				/>
 			</div>
 			<div className="w-1/2 p-4 flex flex-col justify-center">
-				<p className="text-center text-4xl ">
+				<p className="text-center md:text-2xl lg:text-4xl xxs:text-xl">
 					Hello, My name is Ahmed Abd ElHameed and I am a Software
 					Engineer!
 				</p>
