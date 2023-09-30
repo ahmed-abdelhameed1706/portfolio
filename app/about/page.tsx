@@ -1,5 +1,6 @@
 import React from "react";
 import { HiDownload } from "react-icons/hi";
+
 export default function About() {
 	return (
 		<div>

@@ -1,10 +1,14 @@
+"use client";
 import React from "react";
 import { AiOutlineGithub } from "react-icons/ai";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { AiOutlineTwitter } from "react-icons/ai";
 import { AiOutlineFacebook } from "react-icons/ai";
 import { FaPaperPlane } from "react-icons/fa";
-export default function Contact() {
+import { SendEmail } from "@/actions/sendEmail";
+import { useRouter } from "next/navigation";
+export default async function Contact() {
+	const router = useRouter();
 	return (
 		<div className="text-center mt-12 ">
 			<div className="contant-info border-b-2 pb-9">
@@ -87,21 +91,35 @@ export default function Contact() {
 				<h1 className="font-bold text-3xl capitalize">
 					Or send me a direct message!
 				</h1>
-				<form className="mt-10 flex flex-col">
+
+				<form
+					className="mt-10 flex flex-col"
+					action={(formData) => {
+						SendEmail(formData);
+						router.push("/success");
+					}}
+				>
 					<input
 						type="email"
 						name="email"
 						id="email"
 						placeholder="Your Email"
+						required
+						maxLength={60}
 						className="focus:border-white border border-gray-400 rounded-md p-2 mb-3 outline-none text-[#333] focus:ring-2 focus:ring-white focus:ring-opacity-75"
 					/>
 					<textarea
 						name="message"
 						id="message"
+						required
+						maxLength={3500}
 						placeholder="Your Message"
 						className="focus:border-white border border-gray-400 rounded-md p-2 mb-3 h-36 outline-none text-[#333] focus:ring-2 focus:ring-white focus:ring-opacity-75"
 					></textarea>
-					<button className="bg-[#009933] text-white font-bold py-2 px-4 rounded flex justify-center items-center gap-2 w-[12rem] group transition-all hover:bg-[#007722] hover:scale-105 focus:scale-105 active:scale-105">
+					<button
+						type="submit"
+						className="bg-[#009933] text-white font-bold py-2 px-4 rounded flex justify-center items-center gap-2 w-[12rem] group transition-all hover:bg-[#007722] hover:scale-105 focus:scale-105 active:scale-105"
+					>
 						Send Message
 						<FaPaperPlane className="text-sm opacity-70 transition-all group-hover:translate-x-1 group-hover:-translate-y-1" />
 					</button>
